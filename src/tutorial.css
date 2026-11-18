@@ -1,0 +1,59 @@
+.tutorial-screen {
+  width: min(1000px, 100%);
+}
+.tutorial-heading { margin-bottom: 18px; text-align: center; }
+.tutorial-heading h1 { margin: 8px 0 0; font-size: clamp(27px, 4vw, 38px); }
+.tutorial-stage {
+  display: grid;
+  grid-template-columns: minmax(180px, 250px) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(14px, 3vw, 30px);
+  min-height: 290px;
+  padding: 18px 24px 0;
+  overflow: hidden;
+  border: 1px solid #ffffff22;
+  border-radius: 13px;
+  background: linear-gradient(180deg, #171a29aa, #0b0d18eF), url('/backgrounds/combat-arena.jpg') center 58% / cover;
+  box-shadow: 0 20px 55px #0005;
+}
+.tutorial-azure { display: flex; flex-direction: column; align-items: center; align-self: stretch; justify-content: end; min-width: 0; }
+.tutorial-azure img { display: block; width: 100%; height: 245px; object-fit: contain; object-position: center bottom; filter: drop-shadow(0 0 22px #9774e966); }
+.tutorial-azure>span { margin: -3px 0 11px; color: #d7c6ff; font: 9px 'DM Mono', monospace; letter-spacing: .14em; }
+.tutorial-dialogue { align-self: center; margin: 20px 0; padding: clamp(18px, 3vw, 28px); border: 1px solid #c5a7ff55; border-radius: 10px; background: #0d0e19eF; box-shadow: 0 12px 35px #0007; }
+.tutorial-speaker { color: #c8aaff; font: 600 10px 'DM Mono', monospace; letter-spacing: .2em; }
+.tutorial-dialogue h2 { margin: 10px 0 9px; color: #fff; font-size: clamp(20px, 2.8vw, 28px); line-height: 1.2; }
+.tutorial-dialogue p { margin: 0; color: #e0dbea; font-size: clamp(14px, 1.6vw, 17px); line-height: 1.65; }
+.tutorial-step-dots { display: flex; gap: 7px; margin-top: 18px; }
+.tutorial-step-dots span { width: 7px; height: 7px; border-radius: 50%; background: #514b61; }
+.tutorial-step-dots span.active { width: 22px; border-radius: 8px; background: #c09cff; box-shadow: 0 0 12px #ae7dff88; }
+.tutorial-step-dots span.done { background: #8a70b7; }
+.tutorial-actionbar { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+.tutorial-action { display: flex; align-items: center; gap: 10px; min-width: 0; min-height: 61px; padding: 10px 12px; border: 1px solid #343247; border-radius: 8px; background: linear-gradient(145deg, #1e1d2d, #131521); color: #c8c2d6; transition: .2s ease; }
+.tutorial-action svg { flex: 0 0 auto; color: #a88be7; }
+.tutorial-action>span { min-width: 0; font: 600 9px 'DM Mono', monospace; letter-spacing: .04em; }
+.tutorial-action small { display: block; margin-top: 4px; color: #9d97ad; font-size: 8px; font-weight: 400; letter-spacing: 0; }
+.tutorial-action-active { transform: translateY(-2px); border-color: #c6a1ff; background: linear-gradient(145deg, #34274b, #1c1929); color: #fff; box-shadow: 0 0 0 1px #c6a1ff55, 0 0 22px #9a70df33; }
+.tutorial-action-active svg { color: #d4b8ff; }
+.tutorial-navigation { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 18px 0 0; }
+.tutorial-navigation button:disabled { opacity: .4; cursor: not-allowed; }
+
+@media (max-width: 650px) {
+  .tutorial-screen { padding: 18px 0 24px; }
+  .tutorial-heading { margin-bottom: 12px; }
+  .tutorial-stage { grid-template-columns: minmax(84px, 110px) minmax(0, 1fr); gap: 10px; min-height: 230px; padding: 12px 10px 0; }
+  .tutorial-azure img { height: 175px; }
+  .tutorial-azure>span { font-size: 7px; }
+  .tutorial-dialogue { margin: 12px 0; padding: 14px 12px; }
+  .tutorial-dialogue h2 { font-size: 18px; }
+  .tutorial-dialogue p { font-size: 13px; line-height: 1.5; }
+  .tutorial-actionbar { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; margin-top: 10px; }
+  .tutorial-action { min-height: 52px; padding: 8px; gap: 7px; }
+  .tutorial-action>span { font-size: 8px; }
+  .tutorial-action small { font-size: 7px; }
+  .tutorial-navigation { margin-top: 12px; }
+}
+
+@media (max-width: 360px) {
+  .tutorial-stage { grid-template-columns: 1fr; }
+  .tutorial-azure { display: none; }
+}

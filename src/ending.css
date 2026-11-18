@@ -1,0 +1,68 @@
+.story-ending {
+  width: min(760px, 100%);
+  max-width: 760px;
+  padding: clamp(16px, 3vh, 30px) 20px;
+}
+
+.story-ending .ending-art { height: clamp(82px, 12vh, 118px); }
+.story-ending .end-orb { font-size: clamp(54px, 7vh, 74px); }
+.story-ending .ending-azur { transform: scale(.88); transform-origin: bottom center; }
+.story-ending .chapter-label { margin-top: 12px; }
+.story-ending h1 {
+  margin: 10px 0 17px;
+  color: #fff;
+  font-size: clamp(34px, 5vw, 50px);
+  line-height: 1.08;
+  text-wrap: balance;
+  text-shadow: 0 2px 24px #b990ff55;
+}
+.ending-story-card {
+  margin: 0 auto;
+  padding: 17px 22px 19px;
+  border: 1px solid #b99aff55;
+  border-left: 4px solid #c4a2ff;
+  border-radius: 5px 10px 10px 5px;
+  background: linear-gradient(115deg, #211b32f2, #11131feF);
+  box-shadow: 0 12px 36px #0005, inset 0 0 28px #a783fa0c;
+  text-align: left;
+}
+.ending-outcome-label {
+  display: block;
+  color: #c9aaff;
+  font: 600 10px 'DM Mono', monospace;
+  letter-spacing: .17em;
+}
+.story-ending .ending-story-text {
+  max-width: 680px;
+  margin: 10px 0 0;
+  color: #f0edf8;
+  font-size: clamp(16px, 1.55vw, 20px);
+  font-weight: 500;
+  line-height: 1.7;
+  text-align: left;
+  text-wrap: pretty;
+}
+.story-ending .reward-row { margin: 14px 0; }
+.story-ending .ending-btn { max-width: 300px; }
+
+@media (max-height: 760px) and (min-width: 651px) {
+  .story-ending { padding-block: 10px; }
+  .story-ending .ending-art { height: 68px; }
+  .story-ending .end-orb { font-size: 52px; }
+  .story-ending .ending-azur { transform: scale(.7); }
+  .story-ending .chapter-label { margin-top: 7px; }
+  .story-ending h1 { margin: 7px 0 11px; font-size: clamp(30px, 4vw, 42px); }
+  .ending-story-card { padding: 12px 17px; }
+  .story-ending .ending-story-text { margin-top: 7px; font-size: 16px; line-height: 1.5; }
+  .story-ending .reward-row { margin: 9px 0; }
+}
+
+@media (max-width: 650px) {
+  .story-ending { padding: 12px 0 22px; }
+  .story-ending .ending-art { height: 90px; }
+  .story-ending .chapter-label { margin-top: 8px; }
+  .story-ending h1 { font-size: 36px; }
+  .ending-story-card { padding: 14px 15px; }
+  .ending-outcome-label { font-size: 9px; }
+  .story-ending .ending-story-text { font-size: 16px; line-height: 1.6; }
+}
